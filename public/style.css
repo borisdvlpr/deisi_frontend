@@ -1,3 +1,4 @@
+/******************************************************* GENERAL *******************************************************/
 *,
 *:before,
 *:after {
@@ -19,20 +20,48 @@ body {
   /* Locks side scorlling options */
 }
 
+/******************************************************* GENERAL *******************************************************/
+/******************************************************* NAVBAR ********************************************************/
 header {
   top: 0;
   left: 0;
-  width: 5vw;
-  height: 5vw;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+}
+header .menu-area {
+  z-index: 3;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
-header .menu-button {
+header .menu-area .menu-button {
   width: 48px;
   height: 48px;
   transform: rotate(180deg);
   transition: ease-in-out 1000ms;
 }
+header .menu-drawer {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #ffffff;
+  transform: translateX(-120%);
+  transition: ease-in-out 1000ms;
+}
+header .menu-drawer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/******************************************************* NAVBAR ********************************************************/
 
 /*# sourceMappingURL=style.css.map */

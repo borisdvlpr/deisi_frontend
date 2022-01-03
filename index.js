@@ -8,6 +8,6 @@ app.get('/', function(req, res) {
    res.sendFile(path.join(__dirname + 'public/index.html'));
 });
 
-app.listen(8080);
-
-console.log('Running at: http://127.0.0.1:8080');
+app.listen(8080, '0.0.0.0', function() {
+   console.log('Running at: http://127.0.0.1:8080');
+});
