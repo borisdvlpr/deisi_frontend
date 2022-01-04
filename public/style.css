@@ -19,6 +19,17 @@ body {
   /* Locks side scorlling options */
 }
 
+.fullpage {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100vh;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
 /******************************************************* GENERAL *******************************************************/
 /******************************************************* NAVBAR ********************************************************/
 header {
@@ -90,7 +101,7 @@ main .landing-page {
 main .landing-page .landing-anim {
   width: 50%;
   margin-top: 7vw;
-  margin-left: 3vw;
+  margin-left: 3.3vw;
   height: 100%;
 }
 main .landing-page .landing-anim .screen {
