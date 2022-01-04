@@ -8,11 +8,10 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: #2e347c;
-  font-family: "Clash Grotesk", sans-serif;
+  font-family: monospace;
   font-weight: 400;
   max-width: 100vw;
   /* Max width of every component will be the width of the device */
@@ -35,6 +34,7 @@ header .menu-area {
   z-index: 3;
   width: 72px;
   height: 72px;
+  background-color: #2e347c;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -50,7 +50,7 @@ header .menu-drawer {
   height: 72px;
   display: flex;
   align-items: flex-end;
-  background-color: #ffffff;
+  background-color: #2e347c;
   transform: translateX(-120%);
   transition: ease-in-out 1000ms;
 }
@@ -58,10 +58,126 @@ header .menu-drawer ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+}
+header .menu-drawer ul li {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-right: 3vw;
+  animation: left-slide 2s ease-in-out;
+}
+header .menu-drawer ul li::after {
+  content: "";
+  display: flex;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s;
+}
+header .menu-drawer ul li:hover::after {
+  width: 100%;
 }
 
 /******************************************************* NAVBAR ********************************************************/
+/******************************************************** HOME *********************************************************/
+main .landing-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main .landing-page .landing-anim {
+  width: 50%;
+  margin-top: 7vw;
+  margin-left: 3vw;
+  height: 100%;
+}
+main .landing-page .landing-anim .screen {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: #2e347c;
+}
+main .landing-page .landing-anim .terminal_emulator {
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 40px 0 40px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: monospace;
+  font-weight: 700;
+  color: #ffffff;
+}
+main .landing-page .landing-anim .terminal_emulator__field, main .landing-page .landing-anim .terminal_emulator__command {
+  position: relative;
+  padding: 0 1em;
+  margin: 0 0 9px 0;
+}
+main .landing-page .landing-anim .terminal_emulator__field:before, main .landing-page .landing-anim .terminal_emulator__field:after, main .landing-page .landing-anim .terminal_emulator__command:before, main .landing-page .landing-anim .terminal_emulator__command:after {
+  position: absolute;
+}
+main .landing-page .landing-anim .terminal_emulator__field:before, main .landing-page .landing-anim .terminal_emulator__command:before {
+  left: 0;
+  top: 0;
+  content: ">";
+}
+main .landing-page .landing-anim .terminal_emulator__response, main .landing-page .landing-anim .terminal_emulator__command b {
+  padding-bottom: 9px;
+}
+main .landing-page .landing-anim .terminal_emulator__field {
+  display: inline-block;
+  min-width: 1em;
+  min-height: 1.5em;
+  box-sizing: border-box;
+}
+main .landing-page .landing-anim .terminal_emulator__field:after {
+  right: 0;
+  bottom: 0.25em;
+  content: "";
+  width: 1em;
+  height: 1.5em;
+  background: #ffffff;
+  animation: caretBlink 1s infinite;
+}
+main .landing-page .landing-anim .terminal_emulator__field.waiting {
+  padding-left: 0;
+  padding-right: 0;
+}
+main .landing-page .landing-anim .terminal_emulator__field.waiting:before {
+  display: none;
+}
+main .students-page {
+  height: 100vh;
+}
+
+/******************************************************** HOME *********************************************************/
+/******************************************************* ANIMAT ********************************************************/
+@keyframes left-slide {
+  from {
+    display: none;
+    transform: translateX(-10%);
+  }
+  to {
+    display: inline;
+    transform: translateX(0%);
+  }
+}
+@keyframes caretBlink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/******************************************************* ANIMAT ********************************************************/
 
 /*# sourceMappingURL=style.css.map */

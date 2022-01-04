@@ -1,8 +1,6 @@
-var i = 0;
-let i2 = 0;
-var txt = "\u205f-\u205fDepartamento\u205fInformática"; /* The text */
-var speed = 100;                                        /* The speed/duration of the effect in milliseconds */
-var angle = 180;
+let i = 0, i2 = 0, speed = 100, angle = 180; 
+let txt = "\u205f-\u205fDepartamento\u205fInformática";
+
 
 function typeWriter() {
   if (i < txt.length) {
@@ -16,6 +14,7 @@ function typeWriter() {
   }
 }
 
+
 function delTypeWriter() {
     if (i2 < txt.length) {
         setTimeout(function() {
@@ -25,6 +24,7 @@ function delTypeWriter() {
         setTimeout(delTypeWriter, speed);
     }
 }
+
 
 function toggleMenu() {
     let menuButton = document.querySelector('.menu-button');
@@ -51,10 +51,7 @@ function toggleMenu() {
     }); 
 }
 
-function main() {
-    toggleMenu();
-    setInterval(typeWriter, 3000);
-    setInterval(delTypeWriter, 8000);
-}
 
-main()
+setInterval(typeWriter, 3000);
+setInterval(delTypeWriter, 8000);
+toggleMenu();
