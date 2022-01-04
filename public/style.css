@@ -22,6 +22,7 @@ body {
 /******************************************************* GENERAL *******************************************************/
 /******************************************************* NAVBAR ********************************************************/
 header {
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -111,6 +112,7 @@ main .landing-page .landing-anim .terminal_emulator {
   color: #ffffff;
 }
 main .landing-page .landing-anim .terminal_emulator__field, main .landing-page .landing-anim .terminal_emulator__command {
+  z-index: 0;
   position: relative;
   padding: 0 1em;
   margin: 0 0 9px 0;

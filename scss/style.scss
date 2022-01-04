@@ -24,6 +24,7 @@ body {
 
 /******************************************************* NAVBAR ********************************************************/
 header {
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -125,6 +126,7 @@ main {
             }
             
             .terminal_emulator__field, .terminal_emulator__command {
+                z-index: 0;
                 position: relative;
                 padding: 0 1em;
                 margin: 0 0 9px 0;
