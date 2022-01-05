@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #2e347c;
-  font-family: monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 400;
   max-width: 100vw;
   /* Max width of every component will be the width of the device */
@@ -33,6 +33,12 @@ body {
 
 .section {
   scroll-snap-align: start;
+}
+
+.page-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .button {
@@ -90,7 +96,6 @@ header .menu-drawer ul {
   flex-direction: row;
 }
 header .menu-drawer ul li {
-  font-family: "JetBrains Mono", monospace;
   font-size: 20px;
   font-weight: 400;
   margin-right: 3vw;
@@ -128,19 +133,18 @@ main .landing-page .landing-anim .screen {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  margin-top: 8vw;
-  margin-left: 3.4vw;
+  margin-top: 10.8vw;
+  margin-left: 6.8vw;
   background: #2e347c;
 }
 main .landing-page .landing-anim .terminal_emulator {
   bottom: 0;
   width: 100%;
   height: 100%;
-  padding: 40px 40px 0 40px;
+  font-family: monospace;
   font-size: 20px;
   box-sizing: border-box;
   text-align: left;
-  font-family: monospace;
   font-weight: 700;
   color: #ffffff;
 }
@@ -183,41 +187,43 @@ main .landing-page .landing-anim .terminal_emulator__field.waiting {
 main .landing-page .landing-anim .terminal_emulator__field.waiting:before {
   display: none;
 }
-main .landing-page .landing-title {
+main .landing-page .landing-text {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
-main .landing-page .landing-title .hashtag {
+main .landing-page .landing-text .hashtag {
   margin-top: 3vw;
   margin-right: 3.4vw;
-  font-family: "JetBrains Mono", monospace;
   font-size: 18px;
   font-weight: 400;
   text-align: right;
   color: #ffffff;
 }
-main .landing-page .landing-title .title {
+main .landing-page .landing-text .landing-title {
   margin-right: 3.4vw;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 38px;
-  font-weight: 700;
   text-align: right;
-  color: #ffffff;
 }
-main .landing-page .landing-title .home-button {
+main .landing-page .landing-text .home-button {
   margin-top: 3vw;
   margin-right: 3.4vw;
-  transition: 0.8s ease background-color;
+  transition: 0.5s ease background-color;
 }
-main .landing-page .landing-title .home-button:hover {
+main .landing-page .landing-text .home-button:hover {
   color: #2e347c;
   background-color: #ffffff;
 }
 main .students-page {
+  width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main .students-page .students-title {
+  margin-top: 6vw;
+  margin-left: 6.8vw;
 }
 
 /******************************************************** HOME *********************************************************/
@@ -230,6 +236,14 @@ main .students-page {
   to {
     display: inline;
     transform: translateX(0%);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2250px);
   }
 }
 @keyframes caretBlink {
