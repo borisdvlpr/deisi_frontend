@@ -1,6 +1,7 @@
 @use 'variables';
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
 /******************************************************* GENERAL *******************************************************/
 *,
 *:before,
@@ -17,11 +18,22 @@ body {
 	padding: 0;
     display: flex;
     flex-direction: column;
-	background-color: variables.$clr-background;
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 400;
 	max-width: 100vw;						/* Max width of every component will be the width of the device */
 	overflow-x: hidden;						/* Locks side scorlling options */
+}
+
+.row-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.column-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .fullpage {
@@ -37,8 +49,7 @@ body {
 
 .page-title {
     font-size: 38px;
-    font-weight: 700;
-    color: variables.$clr-white;
+    font-weight: 500;
 }
 
 .button {
@@ -67,6 +78,8 @@ header {
     position: fixed;
     display: flex;
     flex-direction: row;
+    //font-family: 'Inter', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
 
     .menu-area {
         z-index: 3;
@@ -90,6 +103,7 @@ header {
         height: variables.$ms-bar-height;
         display: flex;
         align-items: flex-end;
+        justify-content: flex-end;
         background-color: variables.$clr-background;
         transform: translateX(-120%);
         transition: ease-in-out 1000ms;
@@ -136,6 +150,7 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: row;
+        background-color: variables.$clr-background;
 
         .landing-anim {
             width: 50%;
@@ -144,7 +159,7 @@ main {
             .screen {
                 overflow: hidden;
                 width: 100%;
-                height: 100%;
+                height: 78%;
                 margin-top: 10.8vw;
                 margin-left: 6.8vw;
                 background: variables.$clr-background;
@@ -217,10 +232,11 @@ main {
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
+            margin-right: 3.4vw;
+            color: variables.$clr-white;
 
             .hashtag {
                 margin-top: 3vw;
-                margin-right: 3.4vw;
                 font-size: 18px;
                 font-weight: 400;
                 text-align: right;
@@ -228,13 +244,12 @@ main {
             }
 
             .landing-title {
-                margin-right: 3.4vw;
                 text-align: right;
+                color: variables.$clr-white;
             }
 
             .home-button {
                 margin-top: 3vw;
-                margin-right: 3.4vw;
                 transition: .5s ease background-color;
 
                 &:hover {
@@ -244,20 +259,218 @@ main {
             }
         }
     }
+/******************************************************** HOME *********************************************************/
 
+
+/**************************************************** METRICS PAGE *****************************************************/
+    .metrics-page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Clash Grotesk', sans-serif;
+        background-color: variables.$clr-white;
+
+        .metrics-title {
+            margin-top: 6vw;
+            margin-left: 6.8vw;
+            color: variables.$clr-background;
+        }
+
+        .metrics-stats {
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 0.5vw;
+            margin-left: 6.8vw;
+
+            .metrics-stat {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 220px;
+                height: 110px;
+                color: #54B4A1;
+                border-radius: 10px;
+                margin-top: 35px;
+                margin-right: 30px;
+                color: variables.$clr-background;
+
+                .metrics-bigstext {
+                    font-size: 90px;
+                    font-weight: 500;
+                }
+
+                .metrics-smallstext {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .metrics-par {
+            width: 90%;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            margin-top: 11.5vw;
+            margin-right: 3.4vw;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: right;
+            color: variables.$clr-background;
+        }
+
+        .graph {
+            width: 89%;
+            height: 250px;
+            margin-left: 6.8vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 5vw;
+        }
+    }
+/**************************************************** METRICS PAGE *****************************************************/
+
+
+/*************************************************** STUDENTS PAGE *****************************************************/
     .students-page {
         width: 100%;
         height: 100vh;
         display: flex;
         flex-direction: column;
+        font-family: 'Clash Grotesk', sans-serif;
+        background-color: variables.$clr-background;
+    }
+/*************************************************** STUDENTS PAGE *****************************************************/
 
-        .students-title {
+
+/*************************************************** COMPANIES PAGE ****************************************************/
+    .companies-page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Clash Grotesk', sans-serif;
+        background-color: variables.$clr-white;
+
+        .companies-title {
             margin-top: 6vw;
+            margin-left: 11vw;
+            color: variables.$clr-background;
+        }
+
+        .companies-stats {
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 0.5vw;
+            margin-left: 27vw;
+
+            .companies-stat {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 250px;
+                height: 110px;
+                color: #54B4A1;
+                border-radius: 10px;
+                margin-top: 35px;
+                margin-right: 30px;
+                color: variables.$clr-background;
+
+                .companies-bigstext {
+                    font-size: 90px;
+                    font-weight: 500;
+                }
+
+                .companies-smallstext {
+                    align-self: flex-end;
+                    text-align: right;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .companies-par {
+            width: 90%;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            margin-top: 11.5vw;
             margin-left: 6.8vw;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+            color: variables.$clr-background;
+        }
+
+        .partners-carousel {
+            margin-top: 7vw;
+            margin-left: 6.8vw;
+            width: 90%;
+
+            .slide {
+                img {
+                    filter: grayscale(100%);
+                }
+            }
+
+            .slick-slide{
+                margin: 0 20px;
+            }
+            .slick-slide img{
+                width: 100%;
+            }
+            .slick-slider{
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+            }
+            .slick-list{
+                position: relative;
+                display: block;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            .slick-track{
+                position: relative;
+                top: 0;
+                left: 0;
+                display: block
+            }
+            .slick-slide{
+                display: none;
+                float: left;
+                height: 100%;
+                min-height: 1px;
+            }
+            .slick-slide img{
+                display: block;
+            }
+            .slick-initialized .slick-slide{
+                display: block;
+            }
+            .copy{
+                padding-top: 250px;
+            }
         }
     }
+/*************************************************** COMPANIES PAGE ****************************************************/
+
+
+/*************************************************** TEACHERS PAGE *****************************************************/
+    .teachers-page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Clash Grotesk', sans-serif;
+        background-color: variables.$clr-background;
+    }
 }
-/******************************************************** HOME *********************************************************/
+/*************************************************** TEACHERS PAGE *****************************************************/
 
 
 /******************************************************* ANIMAT ********************************************************/

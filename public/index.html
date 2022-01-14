@@ -6,8 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://api.fontshare.com/css?f[]=clash-grotesk@200,300,400,500,600,700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./style.css">
-        <title> DEISI </title>
+        <title> DEISI - Departamento Informática </title>
     </head>
 
     <body>
@@ -24,9 +26,11 @@
             <div class="menu-drawer">
                 <ul>
                     <li><a href="#landing-page"> Home </a></li>
-                    <li><a href="#students-page"> Students </a></li>
-                    <li><a href="#"> Settings </a></li>
-                    <li><a href="#"> About </a></li>
+                    <li><a href="#metrics-page"> Métricas </a></li>
+                    <li><a href="#students-page"> Alunos </a></li>
+                    <li><a href="#companies-page"> Empresas </a></li>
+                    <li><a href="#teachers-page"> Docentes </a></li>
+                    
                 </ul>
             </div>
         </header>
@@ -47,8 +51,79 @@
                     </div>
                 </div>
     
-                <div id="students-page" class="students-page section">
-                    <div class="page-title students-title"> O Teu Lugar é Aqui! </div>
+                <div id="metrics-page" class="metrics-page section">
+                    <div class="text-area">
+                        <div class="row-content">
+                            <div class="column-content">
+                                <div class="page-title metrics-title"> O TEU LUGAR É AQUI! </div>
+                                <div class="metrics-stats column-content">
+                                    <div class="row-content">
+                                        <div class="metrics-stat">
+                                            <div class="metrics-bigstext"> 500+ </div>
+                                            <div class="metrics-smallstext"> alunos formados desde 2008. Mais de 140 inscrições em 2020. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="metrics-par">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque amet. Vero quaerat soluta ratione facere 
+                                maxime, odio nemo magnam perspiciatis sunt eum atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti 
+                                veritatis at veniam id odio, nisi incidunt nobis vitae laudantium laboriosam officiis saepe dolores architecto nesciunt tempore 
+                                nihil, quos voluptates tenetur cumque natus voluptatum? Dicta vitae repellendus cupiditate eum iste earum velit ex cumque sequi 
+                                accusantium.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="graph">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="students-page section">
+
+                </div>
+
+                <div id="companies-page" class="companies-page section">
+                    <div class="text-area">
+                        <div class="row-content">
+                            <div class="companies-par">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque amet. Vero quaerat soluta ratione facere 
+                                maxime, odio nemo magnam perspiciatis sunt eum atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti 
+                                veritatis at veniam id odio, nisi incidunt nobis vitae laudantium laboriosam officiis saepe dolores architecto nesciunt tempore 
+                                nihil, quos voluptates tenetur cumque natus voluptatum? Dicta vitae repellendus cupiditate eum iste earum velit ex cumque sequi 
+                                accusantium.
+                            </div>
+
+                            <div class="column-content">
+                                <div class="page-title companies-title"> O MERCADO ESPERA POR TI! </div>
+                                <div class="companies-stats column-content">
+                                    <div class="row-content">
+                                        <div class="companies-stat">
+                                            <div class="companies-bigstext"> 98.7% </div>
+                                            <div class="companies-smallstext"> de empregabilidade. <br> 1000€ salário médio incial. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partners-carousel">
+                        <section class="customer-logos slider">
+                            <div class="slide"><img src="./assets/facebook.png" alt="logo"></div>
+                            <div class="slide"><img src="./assets/google.png" alt="logo"></div>
+                            <div class="slide"><img src="./assets/instagram.png" alt="logo"></div>
+                            <div class="slide"><img src="./assets/twitter.png" alt="logo"></div>
+                            <div class="slide"><img src="./assets/uber.png" alt="logo"></div>
+                            <div class="slide"><img src="./assets/youtube.png" alt="logo"></div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="teachers-page section">
+                    
                 </div>
             </div>
         </main>
@@ -56,7 +131,84 @@
         <footer>
 
         </footer>
-        <script src="./app.js" type="text/javascript"></script>
-        <script src="./terminal.js" type="text/javascript"></script>
+        <script type="text/javascript" src="./app.js"></script>
+        <script type="text/javascript" src="./terminal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Red', 'Yellow', 'Blue'],
+                    datasets: [{
+                        label: {
+                            display: false
+                        },
+                        data: [20, 100, 500],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1, 
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            display: false,
+                            drawBorder: true,
+                            drawOnChartArea: true,
+                            drawTicks: true,
+                        },
+                        y: {
+                            beginAtZero: true,
+                            //display: false,
+                            
+                        }
+                    }
+                }
+            });
+        </script>  
+
+        <script>
+            $(document).ready(function(){
+                $('.customer-logos').slick({
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: true,
+                    responsive: [{
+                        breakpoint: 768,
+                        setting: {
+                            slidesToShow:4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        setting: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+        </script>
     </body>
 </html>

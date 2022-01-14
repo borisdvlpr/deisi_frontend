@@ -15,13 +15,24 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  background-color: #2e347c;
   font-family: "JetBrains Mono", monospace;
   font-weight: 400;
   max-width: 100vw;
   /* Max width of every component will be the width of the device */
   overflow-x: hidden;
   /* Locks side scorlling options */
+}
+
+.row-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.column-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .fullpage {
@@ -37,8 +48,7 @@ body {
 
 .page-title {
   font-size: 38px;
-  font-weight: 700;
-  color: #ffffff;
+  font-weight: 500;
 }
 
 .button {
@@ -65,6 +75,7 @@ header {
   position: fixed;
   display: flex;
   flex-direction: row;
+  font-family: "Clash Grotesk", sans-serif;
 }
 header .menu-area {
   z-index: 3;
@@ -86,6 +97,7 @@ header .menu-drawer {
   height: 72px;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   background-color: #2e347c;
   transform: translateX(-120%);
   transition: ease-in-out 1000ms;
@@ -119,11 +131,22 @@ header .menu-drawer ul li:hover::after {
 
 /******************************************************* NAVBAR ********************************************************/
 /******************************************************** HOME *********************************************************/
+main {
+  /******************************************************** HOME *********************************************************/
+  /**************************************************** METRICS PAGE *****************************************************/
+  /**************************************************** METRICS PAGE *****************************************************/
+  /*************************************************** STUDENTS PAGE *****************************************************/
+  /*************************************************** STUDENTS PAGE *****************************************************/
+  /*************************************************** COMPANIES PAGE ****************************************************/
+  /*************************************************** COMPANIES PAGE ****************************************************/
+  /*************************************************** TEACHERS PAGE *****************************************************/
+}
 main .landing-page {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
+  background-color: #2e347c;
 }
 main .landing-page .landing-anim {
   width: 50%;
@@ -132,7 +155,7 @@ main .landing-page .landing-anim {
 main .landing-page .landing-anim .screen {
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 78%;
   margin-top: 10.8vw;
   margin-left: 6.8vw;
   background: #2e347c;
@@ -193,40 +216,206 @@ main .landing-page .landing-text {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  margin-right: 3.4vw;
+  color: #ffffff;
 }
 main .landing-page .landing-text .hashtag {
   margin-top: 3vw;
-  margin-right: 3.4vw;
   font-size: 18px;
   font-weight: 400;
   text-align: right;
   color: #ffffff;
 }
 main .landing-page .landing-text .landing-title {
-  margin-right: 3.4vw;
   text-align: right;
+  color: #ffffff;
 }
 main .landing-page .landing-text .home-button {
   margin-top: 3vw;
-  margin-right: 3.4vw;
   transition: 0.5s ease background-color;
 }
 main .landing-page .landing-text .home-button:hover {
   color: #2e347c;
   background-color: #ffffff;
 }
+main .metrics-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Clash Grotesk", sans-serif;
+  background-color: #ffffff;
+}
+main .metrics-page .metrics-title {
+  margin-top: 6vw;
+  margin-left: 6.8vw;
+  color: #2e347c;
+}
+main .metrics-page .metrics-stats {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.5vw;
+  margin-left: 6.8vw;
+}
+main .metrics-page .metrics-stats .metrics-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 220px;
+  height: 110px;
+  color: #54B4A1;
+  border-radius: 10px;
+  margin-top: 35px;
+  margin-right: 30px;
+  color: #2e347c;
+}
+main .metrics-page .metrics-stats .metrics-stat .metrics-bigstext {
+  font-size: 90px;
+  font-weight: 500;
+}
+main .metrics-page .metrics-stats .metrics-stat .metrics-smallstext {
+  font-size: 16px;
+  font-weight: 300;
+}
+main .metrics-page .metrics-par {
+  width: 90%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 11.5vw;
+  margin-right: 3.4vw;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+  color: #2e347c;
+}
+main .metrics-page .graph {
+  width: 89%;
+  height: 250px;
+  margin-left: 6.8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5vw;
+}
 main .students-page {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Clash Grotesk", sans-serif;
+  background-color: #2e347c;
 }
-main .students-page .students-title {
+main .companies-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Clash Grotesk", sans-serif;
+  background-color: #ffffff;
+}
+main .companies-page .companies-title {
   margin-top: 6vw;
+  margin-left: 11vw;
+  color: #2e347c;
+}
+main .companies-page .companies-stats {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.5vw;
+  margin-left: 27vw;
+}
+main .companies-page .companies-stats .companies-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: 110px;
+  color: #54B4A1;
+  border-radius: 10px;
+  margin-top: 35px;
+  margin-right: 30px;
+  color: #2e347c;
+}
+main .companies-page .companies-stats .companies-stat .companies-bigstext {
+  font-size: 90px;
+  font-weight: 500;
+}
+main .companies-page .companies-stats .companies-stat .companies-smallstext {
+  align-self: flex-end;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 300;
+}
+main .companies-page .companies-par {
+  width: 90%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 11.5vw;
   margin-left: 6.8vw;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #2e347c;
+}
+main .companies-page .partners-carousel {
+  margin-top: 7vw;
+  margin-left: 6.8vw;
+  width: 90%;
+}
+main .companies-page .partners-carousel .slide img {
+  filter: grayscale(100%);
+}
+main .companies-page .partners-carousel .slick-slide {
+  margin: 0 20px;
+}
+main .companies-page .partners-carousel .slick-slide img {
+  width: 100%;
+}
+main .companies-page .partners-carousel .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+main .companies-page .partners-carousel .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+main .companies-page .partners-carousel .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+main .companies-page .partners-carousel .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+main .companies-page .partners-carousel .slick-slide img {
+  display: block;
+}
+main .companies-page .partners-carousel .slick-initialized .slick-slide {
+  display: block;
+}
+main .companies-page .partners-carousel .copy {
+  padding-top: 250px;
+}
+main .teachers-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Clash Grotesk", sans-serif;
+  background-color: #2e347c;
 }
 
-/******************************************************** HOME *********************************************************/
+/*************************************************** TEACHERS PAGE *****************************************************/
 /******************************************************* ANIMAT ********************************************************/
 @keyframes left-slide {
   from {
@@ -236,14 +425,6 @@ main .students-page .students-title {
   to {
     display: inline;
     transform: translateX(0%);
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2250px);
   }
 }
 @keyframes caretBlink {

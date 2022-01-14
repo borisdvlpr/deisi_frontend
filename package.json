@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/borisdvlpr/deisi_prototype#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "install": "^0.13.0",
+    "npm": "^8.3.0"
   }
 }
