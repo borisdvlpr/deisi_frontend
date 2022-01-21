@@ -1,5 +1,21 @@
 let angle = 180; 
 
+function humansDetail() {
+    let humanButton = document.querySelector('.user-button');
+    let humanDetails = document.querySelector('.info');
+
+    humanButton.addEventListener('onclick', () => {
+        if(humanDetails.style.transform === 'translateX(-100%)') {
+            humanDetails.style.transform === 'translateX(0%)';
+            humanButton.textContent = 'Return';
+
+        } else if(humanDetails.style.transform === 'translateX(0%)') {
+            humanDetails.style.transform === 'translateX(-100%)'
+            humanButton.textContent = 'Mark Zuck';
+        }
+    });
+}
+
 function toggleMenu() {
     let menuButton = document.querySelector('.menu-button');
     let menuDrawer = document.querySelector('.menu-drawer');
@@ -23,3 +39,4 @@ function toggleMenu() {
 }
 
 toggleMenu();
+humansDetail();

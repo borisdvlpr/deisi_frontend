@@ -81,9 +81,77 @@
                     </div>
                 </div>
 
-                <div class="students-page section">
+                <div id="students-page" class="students-page section">
+                    <div class="text-area">
+                        <div class="row-content">
+                            <div class="students-par">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque amet. Vero quaerat soluta ratione facere 
+                                maxime, odio nemo magnam perspiciatis sunt eum atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti 
+                                veritatis at veniam id odio.
+                            </div>
 
+                            <div class="column-content">
+                                <div class="page-title students-title"> OS NOSSOS ALUNOS </div>
+                                <div class="students-stats column-content">
+                                    <div class="row-content">
+                                        <div class="students-stat">
+                                            <div class="students-bigstext"> 99.9% </div>
+                                            <div class="students-smallstext"> de eestatística. <br> Mais uma estatística qualquer. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="students-carousel">
+                        <section class="students-logos slider">
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
+
 
                 <div id="companies-page" class="companies-page section">
                     <div class="text-area">
@@ -189,6 +257,31 @@
                 }
             });
         </script>  
+        
+        <script>
+            $(document).ready(function(){
+                $('.students-logos').slick({
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: true,
+                    responsive: [{
+                        breakpoint: 768,
+                        setting: {
+                            slidesToShow:4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        setting: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+        </script>
 
         <script>
             $(document).ready(function(){
@@ -196,7 +289,7 @@
                     slidesToShow: 5,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 1500,
+                    autoplaySpeed: 2000,
                     arrows: false,
                     dots: false,
                     pauseOnHover: true,
