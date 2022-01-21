@@ -476,11 +476,12 @@ main .companies-page .partners-carousel {
   margin-left: 6.7vw;
   width: 88%;
 }
-main .companies-page .partners-carousel .slide img {
-  filter: grayscale(100%);
-}
 main .companies-page .partners-carousel .slick-slide {
+  height: 70px;
   margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main .companies-page .partners-carousel .slick-slide img {
   width: 100%;

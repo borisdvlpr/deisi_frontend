@@ -538,14 +538,12 @@ main {
             margin-left: 6.7vw;
             width: 88%;
 
-            .slide {
-                img {
-                    filter: grayscale(100%);
-                }
-            }
-
             .slick-slide{
+                height: 70px;
                 margin: 0 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .slick-slide img{
                 width: 100%;
