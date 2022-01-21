@@ -51,7 +51,7 @@
                     </div>
                 </div>
     
-                <div id="metrics-page" class="metrics-page section">
+                <div id="metrics-page" class="metrics-page section page">
                     <div class="text-area">
                         <div class="row-content">
                             <div class="column-content">
@@ -81,7 +81,7 @@
                     </div>
                 </div>
 
-                <div id="students-page" class="students-page section">
+                <div id="students-page" class="students-page section page">
                     <div class="text-area">
                         <div class="row-content">
                             <div class="students-par">
@@ -153,7 +153,7 @@
                 </div>
 
 
-                <div id="companies-page" class="companies-page section">
+                <div id="companies-page" class="companies-page section page">
                     <div class="text-area">
                         <div class="row-content">
                             <div class="companies-par">
@@ -190,8 +190,75 @@
                     </div>
                 </div>
 
-                <div class="teachers-page section">
-                    
+                <div id="teachers-page" class="teachers-page section page">
+                    <div class="text-area">
+                        <div class="row-content">
+                            <div class="column-content">
+                                <div class="page-title teachers-title"> OS NOSSOS PROFESSORES </div>
+                                <div class="teachers-stats column-content">
+                                    <div class="row-content">
+                                        <div class="teachers-stat">
+                                            <div class="teachers-bigstext"> 70% </div>
+                                            <div class="teachers-smallstext"> dos professores estão dentro do mercado de trabalho. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="teachers-par">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque amet. Vero quaerat soluta ratione facere 
+                                maxime, odio nemo magnam perspiciatis sunt eum atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti 
+                                veritatis at veniam id odio.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teachers-carousel">
+                        <section class="teachers-logos slider">
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="profile">
+                                    <div class="imageProfile"><img src="./assets/kisspng-mark-zuckerberg-portable-network-graphics-facebook-mark-zuckerberg-archives-page-2-of-12-techcentral-5b67134716e7d7.5070537315334817990938.png" alt="zuckerberg"></div>
+                                    <div class="user-button button"> Mark Zuck </div>
+                                    <div class="info"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </main>
@@ -286,6 +353,31 @@
         <script>
             $(document).ready(function(){
                 $('.customer-logos').slick({
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: true,
+                    responsive: [{
+                        breakpoint: 768,
+                        setting: {
+                            slidesToShow:4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        setting: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $('.teachers-logos').slick({
                     slidesToShow: 5,
                     slidesToScroll: 1,
                     autoplay: true,

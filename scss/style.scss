@@ -1,5 +1,6 @@
 @use 'variables';
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 
 /******************************************************* GENERAL *******************************************************/
@@ -45,6 +46,11 @@ body {
 
 .section {
     scroll-snap-align: start;
+}
+
+.page {
+    //font-family: 'Inter', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
 }
 
 .page-title {
@@ -268,7 +274,6 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        font-family: 'Clash Grotesk', sans-serif;
         background-color: variables.$clr-white;
 
         .metrics-title {
@@ -339,7 +344,6 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        font-family: 'Clash Grotesk', sans-serif;
         background-color: variables.$clr-background;
 
         .students-title {
@@ -476,7 +480,6 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        font-family: 'Clash Grotesk', sans-serif;
         background-color: variables.$clr-white;
 
         .companies-title {
@@ -591,8 +594,130 @@ main {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        font-family: 'Clash Grotesk', sans-serif;
         background-color: variables.$clr-background;
+
+        .teachers-title {
+            margin-top: 6vw;
+            margin-left: 6.8vw;
+            color: variables.$clr-white;
+        }
+
+        .teachers-stats {
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 0.5vw;
+            margin-left: 6.8vw;
+
+            .teachers-stat {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 220px;
+                height: 110px;
+                color: #54B4A1;
+                border-radius: 10px;
+                margin-top: 35px;
+                margin-right: 30px;
+                color: variables.$clr-white;
+
+                .teachers-bigstext {
+                    font-size: 90px;
+                    font-weight: 500;
+                }
+
+                .teachers-smallstext {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .teachers-par {
+            width: 90%;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            margin-top: 11.5vw;
+            margin-right: 3.4vw;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: right;
+            color: variables.$clr-white;
+        }
+
+        .teachers-carousel {
+            margin-top: 6vw;
+            margin-left: 6.7vw;
+            width: 88%;
+
+            .slide {
+                img {
+                    filter: grayscale(100%);
+                }
+
+                .profile {
+                    display: flex;
+                    flex-direction: column;
+                    width: 250px;
+                    height: 300px;
+                    align-items: center;
+
+                    img {
+                        width: 200px;
+                    }
+
+                    .user-button {
+                        margin-top: 20px;
+                        transition: .5s ease background-color;
+
+                        &:hover {
+                            color: variables.$clr-background;
+                            background-color: variables.$clr-white;
+                        }
+                    }
+                }
+            }
+
+            .slick-slide{
+                margin: 0 20px;
+            }
+            .slick-slide img{
+                width: 100%;
+            }
+            .slick-slider{
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+            }
+            .slick-list{
+                position: relative;
+                display: block;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            .slick-track{
+                position: relative;
+                top: 0;
+                left: 0;
+                display: block
+            }
+            .slick-slide{
+                display: none;
+                float: left;
+                height: 100%;
+                min-height: 1px;
+            }
+            .slick-slide img{
+                display: block;
+            }
+            .slick-initialized .slick-slide{
+                display: block;
+            }
+            .copy{
+                padding-top: 250px;
+            }
+        }
     }
 }
 /*************************************************** TEACHERS PAGE *****************************************************/
