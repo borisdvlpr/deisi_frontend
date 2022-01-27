@@ -326,7 +326,6 @@ main .students-page .students-stats .students-stat {
   justify-content: center;
   width: 250px;
   height: 110px;
-  color: #54B4A1;
   border-radius: 10px;
   margin-top: 35px;
   margin-right: 30px;
@@ -375,10 +374,17 @@ main .students-page .students-carousel .slide .profile img {
 main .students-page .students-carousel .slide .profile .user-button {
   margin-top: 20px;
   transition: 0.5s ease background-color;
+  cursor: pointer;
 }
 main .students-page .students-carousel .slide .profile .user-button:hover {
   color: #2e347c;
   background-color: #ffffff;
+}
+main .students-page .students-carousel .slide .profile .info {
+  width: 100px;
+  height: 208px;
+  display: none;
+  color: #ffffff;
 }
 main .students-page .students-carousel .slick-slide {
   margin: 0 20px;
