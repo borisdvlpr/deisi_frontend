@@ -97,6 +97,19 @@ header .menu-area .menu-button {
   transform: rotate(180deg);
   transition: ease-in-out 1000ms;
 }
+header .menu-area .menu-button .burger div {
+  /* defines the 3 lines of the burger menu "icon" */
+  width: 40px;
+  /* width of each stripe */
+  height: 5px;
+  /* height of each stripe */
+  background-color: white;
+  /* defines the color of the burger menu "icon" */
+  margin: 6px;
+  /* margin between the stripes */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 header .menu-drawer {
   width: 94%;
   height: 72px;
@@ -667,6 +680,18 @@ main .teachers-page .teachers-carousel .copy {
     opacity: 1;
   }
 }
+.toggle .line1 {
+  transform: rotate(-40deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(40deg) translate(-5px, -6px);
+}
+
 /******************************************************* ANIMAT ********************************************************/
 
 /*# sourceMappingURL=style.css.map */

@@ -101,6 +101,15 @@ header {
             height: 48px;
             transform: rotate(180deg);
             transition: ease-in-out 1000ms;
+
+            .burger div {                                   /* defines the 3 lines of the burger menu "icon" */
+                width: 40px;                                /* width of each stripe */
+                height: 5px;                                /* height of each stripe */
+                background-color: white;                  /* defines the color of the burger menu "icon" */
+                margin: 6px;                                /* margin between the stripes */
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
         }
     }
 
@@ -745,5 +754,17 @@ main {
     50% { opacity: 0; }
     51% { opacity: 1; }
     100% { opacity: 1; }
+}
+
+.toggle .line1 {                    
+    transform: rotate(-40deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(40deg) translate(-5px, -6px);
 }
 /******************************************************* ANIMAT ********************************************************/
