@@ -1,0 +1,35 @@
+@use '../../src/variables';
+
+.card {
+	.profile {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+		height: 300px;
+		align-items: center;
+
+		img {
+			width: 200px;
+			filter: grayscale(100%);
+		}
+
+		.user-button {
+			margin-top: 20px;
+			transition: .5s ease background-color;
+			cursor: pointer;
+
+			&:hover {
+				color: variables.$clr-background;
+				background-color: variables.$clr-white;
+			}
+		}
+
+		.info {
+			width: 100px;
+			height: 208px;
+			display: none;
+			color: variables.$clr-white;
+		}
+	}
+}
+  

@@ -1,0 +1,68 @@
+@use '../../src/variables';
+
+.metrics-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$clr-white;
+
+    .metrics-title {
+        margin-top: 6vw;
+        margin-left: 6.8vw;
+        color: variables.$clr-background;
+    }
+
+    .metrics-stats {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.5vw;
+        margin-left: 6.8vw;
+
+        .metrics-stat {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 220px;
+            height: 110px;
+            color: #54B4A1;
+            border-radius: 10px;
+            margin-top: 35px;
+            margin-right: 30px;
+            color: variables.$clr-background;
+
+            .metrics-bigstext {
+                font-size: 90px;
+                font-weight: 500;
+            }
+
+            .metrics-smallstext {
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .metrics-par {
+        width: 90%;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin-top: 11.5vw;
+        margin-right: 3.4vw;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: right;
+        color: variables.$clr-background;
+    }
+
+    .graph {
+        width: 89%;
+        height: 250px;
+        margin-left: 6.8vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5vw;
+    }
+}

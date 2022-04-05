@@ -1,25 +1,53 @@
 {
-  "name": "deisi_prototype",
+  "name": "deisi_frontend",
   "version": "1.0.0",
-  "description": "Prototype for the new DEISI Website",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/borisdvlpr/deisi_prototype.git"
+    "url": "git+https://github.com/Eduardo-22002197/deisi_frontend.git"
   },
-  "author": "borisdvlpr",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/borisdvlpr/deisi_prototype/issues"
+    "url": "https://github.com/Eduardo-22002197/deisi_frontend/issues"
   },
-  "homepage": "https://github.com/borisdvlpr/deisi_prototype#readme",
+  "homepage": "https://github.com/Eduardo-22002197/deisi_frontend#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
   "dependencies": {
-    "express": "^4.17.2",
-    "install": "^0.13.0",
-    "npm": "^8.3.0"
+    "axios": "^0.26.1",
+    "chart.js": "^3.7.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^17.0.2",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   }
 }
