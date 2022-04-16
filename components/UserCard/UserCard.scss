@@ -15,13 +15,6 @@
 
 		.user-button {
 			margin-top: 20px;
-			transition: .5s ease background-color;
-			cursor: pointer;
-
-			&:hover {
-				color: variables.$clr-background;
-				background-color: variables.$clr-white;
-			}
 		}
 
 		.info {

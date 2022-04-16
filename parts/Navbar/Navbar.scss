@@ -1,7 +1,7 @@
 @use '../../src/variables';
 
 
-header {
+nav {
     z-index: 1;
     top: 0;
     left: 0;
@@ -9,17 +9,15 @@ header {
     height: variables.$ms-bar-height;
     position: fixed;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    background-color: variables.$clr-background;
     font-family: 'Clash Grotesk', sans-serif;
 
     .menu-button {
-        z-index: 3;
-        top: 0;
-        left: 0;
         width: 48px;
         height: 48px;
-        margin: 20px 0 0 1.6vw;
-        // transform: rotate(180deg);
+        margin: 20px 0 0 1.7vw;
+        cursor: pointer;
         transition: ease-in-out 1000ms;
 
         .burger div {                                   /* defines the 3 lines of the burger menu "icon" */
@@ -28,49 +26,56 @@ header {
             background-color: white;                  /* defines the color of the burger menu "icon" */
             margin: 6px;                                /* margin between the stripes */
             transition: all 0.3s ease;
-            cursor: pointer;
         }
     }
 
-    .menu-drawer {
-        width: 94%;
-        height: variables.$ms-bar-height;
+    ul {
+        list-style: none;
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        background-color: variables.$clr-background;
-        transform: translateX(-120%);
-        transition: ease-in-out 1000ms;
+        flex-direction: row;
 
-        ul {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
+        .nav-link {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 10px 3vw 0 0;
 
-            li {
-                font-size: 20px;
-                font-weight: 400;
-                margin-right: 3vw;
-                animation: left-slide 2s ease-in-out;
+            a {
+                color: variables.$clr-white;
+                text-decoration: none;
+            }
 
-                a {
-                    color: variables.$clr-white;
-                    text-decoration: none;
-                }
-
-                &::after {
-                    content: '';
-                    display: flex;
-                    width: 0;
-                    height: 2px;
-                    background: variables.$clr-white;
-                    transition: width .3s;
-                }
-        
-                &:hover::after {
-                    width: 100%;
-                }
+            &::after {
+                content: '';
+                display: flex;
+                width: 0;
+                height: 2px;
+                background: variables.$clr-white;
+                transition: width .3s;
+            }
+    
+            &:hover::after {
+                width: 100%;
             }
         }
     }
+}
+
+.toggle .line1 {                    
+    transform: rotate(-40deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(40deg) translate(-5px, -6px);
+}
+
+.toggle .nav-link a {
+    width: 0;
+}
+
+.white {
+    background-color: #fff;
 }

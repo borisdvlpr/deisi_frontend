@@ -1,0 +1,40 @@
+@use '../../src/variables';
+
+.page-header { 
+    width: 100%;
+    height: auto;
+    margin: calc(variables.$ms-bar-height + 25px) 0 2vh 3vh;        // bigger paragraph - reduce margin bottom
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .stat-group {
+        width: 30%;             // 35% - for bigger paragraph
+        text-align: left;
+        margin-right: 3vh;
+
+        .page-title {
+            font-size: 38px;
+            font-weight: 500;
+        }
+
+        .stat {
+            margin-top: 10px;
+            font-size: 90px;
+            font-weight: 500;
+        }
+
+        .stat-text {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    .page-paragraph {
+        width: 45%;             // 40% - for bigger paragraph
+        margin-top: calc(variables.$ms-bar-height) ;
+        text-align: right;
+        font-size: 17px;
+        font-weight: 400;
+    }
+}

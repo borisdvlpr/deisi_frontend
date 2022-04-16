@@ -1,6 +1,8 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
+import PageHeader from '../../components/PageHeader/PageHeader';
+
 import './StatsPage.scss';
 
 const state = {
@@ -31,40 +33,32 @@ const state = {
 	}],
 };
 
-function StatsPage() {
+export default function StatsPage() {
+	const pageSettings = {
+		title: 'O TEU LUGAR É AQUI',
+		stat: '500+',
+		statText: 'alunos formados em 2008.Mais de 140 inscrições em 2020',
+		paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque
+					amet. Vero quaerat soluta ratione facere maxime, odio nemo magnam perspiciatis sunt eum
+					atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti
+					veritatis at veniam id odio, nisi incidunt nobis vitae laudantium laboriosam officiis
+					saepe dolores architecto nesciunt tempore nihil, quos voluptates tenetur cumque natus
+					voluptatum? Dicta vitae repellendus cupiditate eum iste earum velit ex cumque sequi`,
+
+		textColor: '#2e347c',
+		orientation: 'row',
+		statAlign: 'left',
+		paragraphAlign: 'right',
+	};
+
 	return (
 		<div id="metrics-page" className="metrics-page section page">
-			<div className="text-area">
-				<div className="row-content">
-					<div className="column-content">
-						<div className="page-title metrics-title"> O TEU LUGAR É AQUI! </div>
-						<div className="metrics-stats column-content">
-							<div className="row-content">
-								<div className="metrics-stat">
-									<div className="metrics-bigstext"> 500+ </div>
-									<div className="metrics-smallstext"> alunos formados desde 2008. Mais de 140 inscrições em 2020. </div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className="metrics-par">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque
-						amet. Vero quaerat soluta ratione facere maxime, odio nemo magnam perspiciatis sunt eum
-						atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti
-						veritatis at veniam id odio, nisi incidunt nobis vitae laudantium laboriosam officiis
-						saepe dolores architecto nesciunt tempore nihil, quos voluptates tenetur cumque natus
-						voluptatum? Dicta vitae repellendus cupiditate eum iste earum velit ex cumque sequi
-						accusantium.
-					</div>
-				</div>
-			</div>
+			<PageHeader {...pageSettings} />
 
 			<div className="graph">
-				{/* <canvas id="myChart" /> */}
 				<Line
-  data={state}
-  options={{
+					data={state}
+					options={{
 						responsive: true,
 						maintainAspectRatio: false,
 						scales: {
@@ -90,5 +84,3 @@ function StatsPage() {
 		</div>
 	);
 }
-
-export default StatsPage;

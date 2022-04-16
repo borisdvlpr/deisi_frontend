@@ -1,18 +1,19 @@
 import React from 'react';
 import Slider from 'react-slick';
 import propTypes from 'prop-types';
-import './Carousel.scss';
 import UserCard from '../UserCard/UserCard';
+
+import './Carousel.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel(props) {
-	const { usersCards } = props;
+	const { cardsData, nrSlides } = props;
 
 	const sliderSettings = {
 		arrows: false,
 		dots: false,
-		slidesToShow: 5,
+		slidesToShow: nrSlides,
 		slidesToScroll: 1,
 		infinite: true,
 		autoplay: true,
@@ -43,7 +44,7 @@ export default function Carousel(props) {
 	return (
 		<div className="content">
 			<Slider {...sliderSettings}>
-				{usersCards.map((card, index) => (
+				{cardsData.map((card, index) => (
 					<UserCard index={index} card={card} />
 				))}
 			</Slider>
@@ -52,5 +53,6 @@ export default function Carousel(props) {
 }
 
 Carousel.propTypes = {
-	usersCards: propTypes.array.isRequired,
+	cardsData: propTypes.array.isRequired,
+	nrSlides: propTypes.number.isRequired,
 };

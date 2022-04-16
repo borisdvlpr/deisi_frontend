@@ -27,6 +27,6 @@
         "react/jsx-indent": [1, "tab", {"checkAttributes": true}],
         "react/jsx-filename-extension": [1, { "allow": "as-needed" }],
         "react/prefer-stateless-function": 0,
-        "react/forbid-prop-types": 0
+        "react/jsx-indent-props": [2, "tab"]
     }
 }

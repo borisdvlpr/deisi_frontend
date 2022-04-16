@@ -22,18 +22,6 @@ body {
 	overflow-x: hidden;						    /* Locks side scorlling options */
 }
 
-.row-content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.column-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .fullpage {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -65,5 +53,31 @@ body {
     justify-content: center;
     color: variables.$clr-white;
     border: 1px solid variables.$clr-white;
+    cursor: pointer;
+    transition: .5s ease background-color;
 
+    &:hover {
+        color: variables.$clr-background;
+        background-color: variables.$clr-white;
+    }
+}
+
+.button-inverse {
+    width: 160px;
+    height: 50px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 17px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: variables.$clr-background;
+    border: 1px solid variables.$clr-background;
+    cursor: pointer;
+    transition: .5s ease background-color;
+
+    &:hover {
+        color: variables.$clr-white;
+        background-color: variables.$clr-background;
+    }
 }

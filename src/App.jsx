@@ -5,6 +5,7 @@ import StatsPage from '../pages/StatsPage/StatsPage';
 import StudentsPage from '../pages/StudentsPage/StudentsPage';
 import CompaniesPage from '../pages/CompaniesPage/CompaniesPage';
 import TeachersPage from '../pages/TeachersPage/TeachersPage';
+import CoursesPage from '../pages/CoursesPage/CoursesPage';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<StudentsPage />
 				<CompaniesPage />
 				<TeachersPage />
+				<CoursesPage />
 			</main>
 		</>
 	);

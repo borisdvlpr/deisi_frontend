@@ -1,0 +1,42 @@
+.courses-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    .courses-carousel {
+        margin: 6vh 0 0 7.5vw;
+        width: 88%;
+    
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin: 25px 0 1.5rem;
+        }
+    
+        .controls button {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 2px solid #2e347c;
+            color: #2e347c;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.5s ease-out;
+        }
+    
+        .controls button:hover {
+            color: #ffffff;
+            background-color: #2e347c;
+        }
+    
+        .controls button:nth-child(1) {
+            margin-right: 1rem;
+        }
+    
+        .controls button:nth-child(2) {
+            margin: 0 2rem 0 1rem;
+        }
+    }
+}

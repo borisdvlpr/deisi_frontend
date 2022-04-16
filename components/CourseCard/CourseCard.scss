@@ -1,0 +1,44 @@
+.card-course {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    position: relative;
+    border: 2px solid #2e347c;
+    color: #2e347c;
+
+    .text-info {
+        padding: 0 1rem;
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header span {
+            color: #2d3748;
+        }
+
+        .card-title {
+            width: 74%;
+        }
+
+        p {
+            margin: 0 0 5px 0;
+
+            a {
+                color: #2e347c;
+            }
+        }
+
+        p:nth-child(5) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .card-button {
+        align-self: center;
+        margin-bottom: 15px;
+    }
+}

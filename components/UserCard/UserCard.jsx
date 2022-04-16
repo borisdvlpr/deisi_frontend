@@ -10,7 +10,7 @@ export default function UserCard(props) {
 		<div key={index} className="card">
 			<div className="profile">
 				<div className="info" />
-				<div className="imageProfile"><img src={card.imageSrc} alt={card.name} /></div>
+				<div className="imageProfile"><img src={card.imgSrc} alt={card.name} /></div>
 				<div className="user-button button">{card.name}</div>
 			</div>
 		</div>
