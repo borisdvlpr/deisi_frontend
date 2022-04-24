@@ -12,8 +12,6 @@ export default function Carousel() {
 	const [isLoaded, isError, apiData] = apiRequest('/courses-api/list');
 	const [sliderRef, setSliderRef] = useState(null);
 
-	console.log(isLoaded);
-
 	const pageSettings = {
 		title: 'E AGORA?',
 		stat: 6,
@@ -61,7 +59,7 @@ export default function Carousel() {
 				<div className="courses-carousel">
 					<Slider ref={setSliderRef} {...sliderSettings}>
 						{apiData.map((card, index) => (
-							<CourseCard index={index} card={card} />
+							<CourseCard index={index} card={card} buttonStyle="inverse" textColor="#2e347c" />
 						))}
 					</Slider>
 					<div className="controls">
@@ -71,8 +69,8 @@ export default function Carousel() {
 				</div>
 			)
 				: (
-					<div className="courses-carousel">
-						<p>Error!</p>
+					<div className="error-carousel">
+						<p>Erro :(</p>
 					</div>
 				)}
 		</div>

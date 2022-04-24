@@ -1,53 +1,57 @@
 import React, { useEffect } from 'react';
 import './Navbar.scss';
 
-function toggleMenu() {
-	const burger = document.querySelector('.burger');
-	const navItems = document.querySelectorAll('.nav-link');
-
-	burger.classList.toggle('toggle');
-
-	navItems.forEach((navItem) => {
-		navItem.classList.toggle('toggle');
-	});
-}
-
-function toggleLink() {
-	const burger = document.querySelector('.burger');
-
-	if (burger.classList.contains('toggle')) {
-		toggleMenu();
-	}
-}
-
 export default function Navbar() {
 	// useEffect(() => {
-	// 	const landingPage = document.getElementById('landing-page');
-	// 	const studentsPage = document.getElementById('students-page');
-	// 	const teachersPage = document.getElementById('teachers-page');
-	// 	const metricsPage = document.getElementById('metrics-page');
-	// 	const companiesPage = document.getElementById('companies-page');
-	// 	const coursesPage = document.getElementById('courses-page');
+	// 	const burgerDivs = document.querySelectorAll('.burger div');
+	// 	const navLinks = document.querySelectorAll('.nav-link a');
+	// 	const metricsPage = document.querySelector('.metrics-page');
+	// 	const studentsPage = document.querySelector('.students-page');
+	// 	const companiesPage = document.querySelector('.companies-page');
+	// 	const teachersPage = document.querySelector('.teachers-page');
+	// 	const coursesPage = document.querySelector('.courses-page');
 
-	// 	const callback = () => {
-	// 		const navBar = document.querySelector('nav');
-	// 		navBar.classList.toggle('white');
+	// 	const sectionOptions = {
+	// 		rootMargin: '-30px 0px 0px 0px',
 	// 	};
 
-	// 	const observer = new IntersectionObserver(callback, {
-	// 		threshold: [0.1, 0.9],
-	// 	});
+	// 	const sectionObserver = new IntersectionObserver(((entries, sectionObserver) => {
+	// 		entries.forEach((entry) => {
+	// 			if (entry.isIntersecting) {
+	// 				burgerDivs.forEach((divBar) => {
+	// 					divBar.classList.remove('blue-background');
+	// 				});
 
-	// 	// // observer.observe(landingPage);
-	// 	// // observer.disconnect();
-	// 	observer.observe(metricsPage);
-	// 	// // observer.unobserve(metricsPage);
-	// 	// // observer.observe(studentsPage);
-	// 	observer.observe(companiesPage);
-	// 	// // observer.unobserve(companiesPage);
-	// 	// // observer.observe(teachersPage);
-	// 	observer.observe(coursesPage);
-	// });
+	// 				navLinks.forEach((link) => {
+	// 					link.classList.remove('blue-text');
+	// 				});
+	// 			} else {
+	// 				burgerDivs.forEach((divBar) => {
+	// 					divBar.classList.add('blue-background');
+	// 				});
+
+	// 				navLinks.forEach((link) => {
+	// 					link.classList.add('blue-text');
+	// 				});
+	// 			}
+	// 		});
+	// 	}), sectionOptions);
+	// }, []);
+
+	function toggleMenu() {
+		const burger = document.querySelector('.burger');
+		const navLinks = document.querySelectorAll('.nav-link');
+
+		burger.classList.toggle('toggle');
+
+		navLinks.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = '';
+			} else {
+				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+			}
+		});
+	}
 
 	return (
 		<nav>
@@ -60,12 +64,12 @@ export default function Navbar() {
 			</div>
 
 			<ul>
-				<li className="nav-link"><a href="#landing-page" onClick={() => toggleLink()}>Home</a></li>
-				<li className="nav-link"><a href="#metrics-page" onClick={() => toggleLink()}>Métricas</a></li>
-				<li className="nav-link"><a href="#students-page" onClick={() => toggleLink()}>Alunos</a></li>
-				<li className="nav-link"><a href="#companies-page" onClick={() => toggleLink()}>Empresas</a></li>
-				<li className="nav-link"><a href="#teachers-page" onClick={() => toggleLink()}>Docentes</a></li>
-				<li className="nav-link"><a href="#courses-page"> Cursos </a></li>
+				<li className="nav-link"><a href="#landing-page" onClick={() => toggleMenu()}>Home</a></li>
+				<li className="nav-link"><a href="#metrics-page" onClick={() => toggleMenu()}>Métricas</a></li>
+				<li className="nav-link"><a href="#students-page" onClick={() => toggleMenu()}>Alunos</a></li>
+				<li className="nav-link"><a href="#companies-page" onClick={() => toggleMenu()}>Empresas</a></li>
+				<li className="nav-link"><a href="#teachers-page" onClick={() => toggleMenu()}>Docentes</a></li>
+				<li className="nav-link"><a href="#courses-page" onClick={() => toggleMenu()}> Cursos </a></li>
 			</ul>
 		</nav>
 	);

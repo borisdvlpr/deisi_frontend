@@ -1,9 +1,10 @@
 .card-course {
-    height: 100%;
+    max-width: 24rem;
+    height: 300px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 24rem;
-    position: relative;
+    justify-content: space-between;
     border: 2px solid #2e347c;
     color: #2e347c;
 
@@ -25,15 +26,12 @@
         }
 
         p {
-            margin: 0 0 5px 0;
+            margin: -5px 0 17px 0;
+            font-size: 15px;
 
             a {
                 color: #2e347c;
             }
-        }
-
-        p:nth-child(5) {
-            margin-bottom: 20px;
         }
     }
 

@@ -7,11 +7,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'build'),
-		filename: 'bundle.js',
-	},
-	devServer: {
-		port: 8081,
-		proxy: { '/**': { target: 'http://localhost:8080', secure: false } },
+		filename: 'deisi.[contenthash].bundle.js',
 	},
 	module: {
 		rules: [

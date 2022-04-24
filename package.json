@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "dev": "webpack serve --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js",
+    "serve": "live-server build/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,10 +39,10 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "axios": "^0.26.1",
     "chart.js": "^3.7.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

@@ -6,26 +6,32 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: variables.$ms-bar-height;
+    height: 60px;
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: variables.$clr-background;
+    background-color: rgba($color: variables.$clr-background, $alpha: 0.90);
+    backdrop-filter: blur(7px);
     font-family: 'Clash Grotesk', sans-serif;
 
     .menu-button {
         width: 48px;
         height: 48px;
-        margin: 20px 0 0 1.7vw;
+        margin: 15px 0 0 1.5vw;
         cursor: pointer;
         transition: ease-in-out 1000ms;
 
         .burger div {                                   /* defines the 3 lines of the burger menu "icon" */
             width: 40px;                                /* width of each stripe */
-            height: 4px;                                /* height of each stripe */
-            background-color: white;                  /* defines the color of the burger menu "icon" */
-            margin: 6px;                                /* margin between the stripes */
+            height: 3px;                                /* height of each stripe */
+            background-color: #ffffff;                /* defines the color of the burger menu "icon" */
+            margin: 5px;                                /* margin between the stripes */
             transition: all 0.3s ease;
+            
+        }
+
+        .blue-background {
+            background-color: #2e347c;
         }
     }
 
@@ -35,9 +41,10 @@ nav {
         flex-direction: row;
 
         .nav-link {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 400;
-            margin: 10px 3vw 0 0;
+            margin: 5px 3vw 0 0;
+            opacity: 0;
 
             a {
                 color: variables.$clr-white;
@@ -56,12 +63,20 @@ nav {
             &:hover::after {
                 width: 100%;
             }
+
+            .blue-text {
+                color: #2e347c;
+            }
+
+            .blue-text::after {
+                background-color: #2e347c;
+            }
         }
     }
 }
 
 .toggle .line1 {                    
-    transform: rotate(-40deg) translate(-5px, 6px);
+    transform: rotate(-40deg) translate(-5px, 8px);
 }
 
 .toggle .line2 {
@@ -69,13 +84,17 @@ nav {
 }
 
 .toggle .line3 {
-    transform: rotate(40deg) translate(-5px, -6px);
+    transform: rotate(40deg) translate(-5px, -8px);
 }
 
-.toggle .nav-link a {
-    width: 0;
-}
+@keyframes navLinkFade {                        /* animation responsible for the fade in of the burger menu elements */
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
 
-.white {
-    background-color: #fff;
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

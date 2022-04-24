@@ -4,20 +4,36 @@ import propTypes from 'prop-types';
 import './UserCard.scss';
 
 export default function UserCard(props) {
-	const { index, card } = props;
+	const { card, buttonStyle, textColor } = props;
+
+	function toggleDesctiption() {
+		const image = document.getElementById(card.name);
+		const userDescription = document.getElementById(card.description);
+
+		if (image.style.display === 'flex') {
+			image.style.display = 'none';
+			userDescription.style.display = 'inline';
+		} else {
+			image.style.display = 'flex';
+			userDescription.style.display = 'none';
+		}
+	}
 
 	return (
-		<div key={index} className="card">
+		<div key={card.name} className="card">
 			<div className="profile">
-				<div className="info" />
-				<div className="imageProfile"><img src={card.imgSrc} alt={card.name} /></div>
-				<div className="user-button button">{card.name}</div>
+				<div id={card.description} className="info no-display" style={{ color: textColor }}>{card.description}</div>
+				<div id={card.name} className="image-container">
+					<img src={card.imgSrc} alt={card.name} />
+				</div>
+				<button className={`user-button button-${buttonStyle}`} onClick={() => toggleDesctiption()}>{card.name}</button>
 			</div>
 		</div>
 	);
 }
 
 UserCard.propTypes = {
-	index: propTypes.number.isRequired,
 	card: propTypes.object.isRequired,
+	buttonStyle: propTypes.array.isRequired,
+	textColor: propTypes.array.isRequired,
 };

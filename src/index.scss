@@ -42,18 +42,20 @@ body {
     font-weight: 500;
 }
 
-.button {
+.button-regular {
     width: 160px;
     height: 50px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 17px;
-    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
     color: variables.$clr-white;
+    background-color: transparent;
     border: 1px solid variables.$clr-white;
     cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
     transition: .5s ease background-color;
 
     &:hover {
@@ -72,6 +74,7 @@ body {
     align-items: center;
     justify-content: center;
     color: variables.$clr-background;
+    background-color: transparent;
     border: 1px solid variables.$clr-background;
     cursor: pointer;
     transition: .5s ease background-color;
@@ -79,5 +82,17 @@ body {
     &:hover {
         color: variables.$clr-white;
         background-color: variables.$clr-background;
+    }
+}
+
+.error-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+
+    p {
+        font-size: 72px;
+        color: #fff;
     }
 }

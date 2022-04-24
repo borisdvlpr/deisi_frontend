@@ -30,11 +30,11 @@ export default function pageHeader(props) {
 
 pageHeader.propTypes = {
 	title: propTypes.string.isRequired,
-	stat: propTypes.string,
-	statText: propTypes.string,
-	paragraph: propTypes.string,
+	stat: propTypes.string.isRequired,
+	statText: propTypes.string.isRequired,
+	paragraph: propTypes.string.isRequired,
 	textColor: propTypes.string.isRequired,
 	orientation: propTypes.string.isRequired,
 	statAlign: propTypes.string.isRequired,
-	paragraphAlign: propTypes.string,
+	paragraphAlign: propTypes.string.isRequired,
 };
