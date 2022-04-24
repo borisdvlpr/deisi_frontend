@@ -26,7 +26,7 @@ export default function UserCard(props) {
 				<div id={card.name} className="image-container">
 					<img src={card.imgSrc} alt={card.name} />
 				</div>
-				<button className={`user-button button-${buttonStyle}`} onClick={() => toggleDesctiption()}>{card.name}</button>
+				<button className={`user-button terminal-font button-${buttonStyle}`} onClick={() => toggleDesctiption()}>{card.name}</button>
 			</div>
 		</div>
 	);

@@ -132,7 +132,7 @@ function LandingPage() {
 	}, []);
 
 	return (
-		<div id="landing-page" className="landing-page section">
+		<div id="landing-page" className="landing-page terminal-font section">
 			<div className="landing-anim">
 				<div id="screen" className="terminal_emulator" />
 			</div>
@@ -140,7 +140,7 @@ function LandingPage() {
 			<div className="landing-text">
 				<div className="hashtag"> #oteulugaréaqui </div>
 				<div className="page-title landing-title"> Departamento de Engenharia Informática e Sistemas de Informação </div>
-				<div className="home-button button"> Next Page </div>
+				<a className="home-button button-regular" href="#metrics-page">Sobre Nós</a>
 			</div>
 		</div>
 	);

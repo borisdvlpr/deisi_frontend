@@ -15,28 +15,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
 
-        .card-header span {
-            color: #2d3748;
-        }
+            .card-title {
+                width: 74%;
+            }
 
-        .card-title {
-            width: 74%;
+            span {
+                color: #2d3748;
+            }            
         }
 
         p {
             margin: -5px 0 17px 0;
             font-size: 15px;
 
-            a {
-                color: #2e347c;
-            }
         }
     }
 
     .card-button {
         align-self: center;
         margin-bottom: 15px;
+        text-decoration: none;
+        color: #2e347c;
     }
 }
