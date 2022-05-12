@@ -31,12 +31,12 @@ export default function TeachersPage() {
 
 			{isLoaded !== false && isError === undefined && apiData !== null ? (
 				<div className="teachers-carousel">
-					<Carousel cardsData={apiData} nrSlides={5} />
+					<Carousel cardsData={apiData} nrSlides={5} buttonStyle="regular" textColor="#ffffff" />
 				</div>
 			)
 				: (
-					<div className="teachers-carousel">
-						<p>Error!</p>
+					<div className="error-carousel">
+						<p>Erro :(</p>
 					</div>
 				)}
 		</div>

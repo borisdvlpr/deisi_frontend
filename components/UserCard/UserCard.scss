@@ -8,21 +8,31 @@
 		height: 300px;
 		align-items: center;
 
-		img {
+		.image-container {
 			width: 200px;
-			filter: grayscale(100%);
-		}
+			height: 207px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
+			img {
+				width: 170px;
+				transition: all 300ms ease-out;
+			}
+		}
+		
 		.user-button {
 			margin-top: 20px;
+			width: 170px;
 		}
 
 		.info {
-			width: 100px;
-			height: 208px;
+			width: 170px;
+			height: 207px;
+			text-align: start;
+			font-size: 14px;
 			display: none;
-			color: variables.$clr-white;
+			transition: all 300ms ease-out;
 		}
 	}
 }
-  

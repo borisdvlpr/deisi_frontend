@@ -13,7 +13,7 @@ export default function APIRequest(urlAPI) {
 				setIsLoaded(true);
 			})
 			.catch((err) => {
-				setIsError(err);
+				setIsError(err.status);
 			});
 	}, []);
 

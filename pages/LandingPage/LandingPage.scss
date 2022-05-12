@@ -103,6 +103,7 @@
         .home-button {
             margin-top: 57.6px;
             transition: .5s ease background-color;
+            text-decoration: none;
 
             &:hover {
                 color: variables.$clr-background;

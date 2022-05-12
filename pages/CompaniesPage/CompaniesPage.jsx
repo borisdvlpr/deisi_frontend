@@ -1,63 +1,12 @@
 import React from 'react';
+import apiRequest from '../../api/api_request';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Carousel from '../../components/Carousel/Carousel';
-import zuck from '../../public/zuck.png';
 
 import './CompaniesPage.scss';
 
 export default function CompaniesPage() {
-	const companiesCards = [
-		{
-			imageSrc: zuck,
-			name: 'Company 1',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 2',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 3',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 4',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 5',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 6',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 7',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 8',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 9',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-		{
-			imageSrc: zuck,
-			name: 'Company 10',
-			description: 'Lorem ipsum dolor sit amet, consectur dolori',
-		},
-	];
+	const [isLoaded, isError, apiData] = apiRequest('/companies-api/list');
 
 	const pageSettings = {
 		title: 'O MERCADO ESPERA-TE!',
@@ -80,9 +29,16 @@ export default function CompaniesPage() {
 		<div id="companies-page" className="companies-page section page">
 			<PageHeader {...pageSettings} />
 
-			<div className="companies-carousel">
-				<Carousel cardsData={companiesCards} nrSlides={5} />
-			</div>
+			{isLoaded !== false && isError === undefined && apiData !== null ? (
+				<div className="companies-carousel">
+					<Carousel cardsData={apiData} nrSlides={5} buttonStyle="inverse" textColor="#2e347c" />
+				</div>
+			)
+				: (
+					<div className="error-carousel">
+						<p>Erro :(</p>
+					</div>
+				)}
 		</div>
 	);
 }

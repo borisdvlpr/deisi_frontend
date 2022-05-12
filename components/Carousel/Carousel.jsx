@@ -8,14 +8,16 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel(props) {
-	const { cardsData, nrSlides } = props;
+	const {
+		cardsData, nrSlides, buttonStyle, textColor,
+	} = props;
 
 	const sliderSettings = {
 		arrows: false,
 		dots: false,
 		slidesToShow: nrSlides,
 		slidesToScroll: 1,
-		infinite: true,
+		infinite: false,
 		autoplay: true,
 		autoplaySpeed: 2000,
 		pauseOnHover: true,
@@ -45,7 +47,7 @@ export default function Carousel(props) {
 		<div className="content">
 			<Slider {...sliderSettings}>
 				{cardsData.map((card, index) => (
-					<UserCard index={index} card={card} />
+					<UserCard index={index} card={card} buttonStyle={buttonStyle} textColor={textColor} />
 				))}
 			</Slider>
 		</div>
@@ -55,4 +57,6 @@ export default function Carousel(props) {
 Carousel.propTypes = {
 	cardsData: propTypes.array.isRequired,
 	nrSlides: propTypes.number.isRequired,
+	buttonStyle: propTypes.array.isRequired,
+	textColor: propTypes.array.isRequired,
 };

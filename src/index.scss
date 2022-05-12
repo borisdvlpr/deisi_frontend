@@ -16,7 +16,7 @@ body {
 	padding: 0;
     display: flex;
     flex-direction: column;
-	font-family: 'JetBrains Mono', monospace;
+    font-family: 'Clash Grotesk', sans-serif;
 	font-weight: 400;
 	max-width: 100vw;						    /* Max width of every component will be the width of the device */
 	overflow-x: hidden;						    /* Locks side scorlling options */
@@ -33,8 +33,8 @@ body {
     scroll-snap-align: start;
 }
 
-.page {
-    font-family: 'Clash Grotesk', sans-serif;
+.terminal-font {
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .page-title {
@@ -42,19 +42,23 @@ body {
     font-weight: 500;
 }
 
-.button {
+.button-regular {
     width: 160px;
     height: 50px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 17px;
-    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
     color: variables.$clr-white;
+    background-color: transparent;
     border: 1px solid variables.$clr-white;
     cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
     transition: .5s ease background-color;
+
+    a {
+        text-decoration: none;
+    }
 
     &:hover {
         color: variables.$clr-background;
@@ -65,19 +69,35 @@ body {
 .button-inverse {
     width: 160px;
     height: 50px;
-    font-family: 'JetBrains Mono', monospace;
     font-size: 17px;
     font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
     color: variables.$clr-background;
+    background-color: transparent;
     border: 1px solid variables.$clr-background;
     cursor: pointer;
     transition: .5s ease background-color;
 
+    a {
+        text-decoration: none;
+    }
+
     &:hover {
         color: variables.$clr-white;
         background-color: variables.$clr-background;
+    }
+}
+
+.error-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+
+    p {
+        font-size: 72px;
+        color: #fff;
     }
 }
