@@ -9,19 +9,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel() {
-	const [isLoaded, isError, apiData] = apiRequest('/courses-api/list');
+	const [headerLoaded, headerError, headerData] = apiRequest('/api/pages/list?pageName=Courses');
+	const [isLoaded, isError, apiData] = apiRequest('/api/courses/list');
 	const [sliderRef, setSliderRef] = useState(null);
 
 	const pageSettings = {
-		title: 'E AGORA?',
-		stat: 6,
-		statText: 'cursos no nosso departamento. Qual é o teu?',
-		paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque
-					amet. Vero quaerat soluta ratione facere maxime, odio nemo magnam perspiciatis sunt eum
-					atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti
-					veritatis at veniam id odio, nisi incidunt nobis vitae laudantium laboriosam officiis
-					saepe dolores architecto nesciunt tempore nihil, quos voluptates tenetur cumque natus`,
-
 		textColor: '#2e347c',
 		orientation: 'row-reverse',
 		statAlign: 'right',
@@ -51,9 +43,21 @@ export default function Carousel() {
 		],
 	};
 
+	const errorHeader = {
+		title: 'Error :(',
+		stat: 'NaN',
+		statText: 'No stats available...',
+		pageText: 'Unable to load page data, try again...',
+	};
+
 	return (
 		<div id="courses-page" className="courses-page section page">
-			<PageHeader {...pageSettings} />
+			{headerLoaded !== false && headerError === undefined && headerData !== null ? (
+				<PageHeader {...{ ...headerData[0], ...pageSettings }} />
+			)
+				: (
+					<PageHeader {...{ ...errorHeader, ...pageSettings }} />
+				)}
 
 			{isLoaded !== false && isError === undefined && apiData !== null ? (
 				<div className="courses-carousel">

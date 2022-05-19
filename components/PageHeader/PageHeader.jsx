@@ -5,7 +5,7 @@ import './PageHeader.scss';
 
 export default function pageHeader(props) {
 	const {
-		title, stat, statText, paragraph, textColor, orientation, statAlign, paragraphAlign,
+		title, stat, statText, pageText, textColor, orientation, statAlign, paragraphAlign,
 	} = props;
 
 	const headerStyle = {
@@ -16,13 +16,13 @@ export default function pageHeader(props) {
 	return (
 		<div className="page-header" style={headerStyle}>
 			<div className="stat-group" style={{ textAlign: statAlign }}>
-				<div className="page-title">{title}</div>
+				<div className="page-title">{title.toUpperCase()}</div>
 				<div className="stat">{stat}</div>
 				<div className="stat-text">{statText}</div>
 			</div>
 
 			<div className="page-paragraph" style={{ textAlign: paragraphAlign }}>
-				{paragraph}
+				{pageText}
 			</div>
 		</div>
 	);
@@ -32,7 +32,7 @@ pageHeader.propTypes = {
 	title: propTypes.string.isRequired,
 	stat: propTypes.string.isRequired,
 	statText: propTypes.string.isRequired,
-	paragraph: propTypes.string.isRequired,
+	pageText: propTypes.string.isRequired,
 	textColor: propTypes.string.isRequired,
 	orientation: propTypes.string.isRequired,
 	statAlign: propTypes.string.isRequired,
