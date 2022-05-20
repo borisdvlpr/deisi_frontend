@@ -28,4 +28,4 @@
    - npm run dev
    ```
 
-4. Abrir o `localhost` no browser, utilizando a porta especificada no ficheiro `server.js` e.g. <http://localhost:8081/>
+4. Abrir o `localhost` no browser, utilizando a porta especificada no ficheiro `webpack.dev.js` e.g. <http://localhost:8081/>

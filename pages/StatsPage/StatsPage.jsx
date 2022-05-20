@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
+import apiRequest from '../../api/api_request';
 import PageHeader from '../../components/PageHeader/PageHeader';
 
 import './StatsPage.scss';
@@ -34,26 +35,30 @@ const state = {
 };
 
 export default function StatsPage() {
-	const pageSettings = {
-		title: 'O TEU LUGAR É AQUI',
-		stat: '500+',
-		statText: 'alunos formados em 2008.Mais de 140 inscrições em 2020',
-		paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur non eos id neque
-					amet. Vero quaerat soluta ratione facere maxime, odio nemo magnam perspiciatis sunt eum
-					atque! Earum adipisci suscipit asperiores, placeat qui cumque. Nostrum corrupti
-					veritatis at veniam id odio, nisi incidunt nobis vitae laudantium laboriosam officiis
-					saepe dolores architecto nesciunt tempore nihil, quos voluptates tenetur cumque natus
-					voluptatum? Dicta vitae repellendus cupiditate eum iste earum velit ex cumque sequi`,
+	const [headerLoaded, headerError, headerData] = apiRequest('/api/pages/list?pageName=Metrics');
 
+	const pageSettings = {
 		textColor: '#2e347c',
 		orientation: 'row',
 		statAlign: 'left',
 		paragraphAlign: 'right',
 	};
 
+	const errorHeader = {
+		title: 'Error :(',
+		stat: 'NaN',
+		statText: 'No stats available...',
+		pageText: 'Unable to load page data, try again...',
+	};
+
 	return (
 		<div id="metrics-page" className="metrics-page section page">
-			<PageHeader {...pageSettings} />
+			{headerLoaded !== false && headerError === undefined && headerData !== null ? (
+				<PageHeader {...{ ...headerData[0], ...pageSettings }} />
+			)
+				: (
+					<PageHeader {...{ ...errorHeader, ...pageSettings }} />
+				)}
 
 			<div className="graph">
 				<Line
