@@ -8,6 +8,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'deisi.[contenthash].bundle.js',
+		publicPath: '/static',
 	},
 	module: {
 		rules: [
