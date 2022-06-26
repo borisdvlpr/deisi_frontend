@@ -6,7 +6,7 @@ export default function APIRequest(urlAPI) {
 	const [apiData, setApiData] = useState(undefined);
 
 	useEffect(() => {
-		fetch(urlAPI)
+		fetch(`/landing-page/${urlAPI}`)
 			.then((res) => res.json())
 			.then((json) => {
 				setApiData(json);
