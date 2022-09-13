@@ -1,43 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Navbar.scss';
 
 export default function Navbar() {
-	// useEffect(() => {
-	// 	const burgerDivs = document.querySelectorAll('.burger div');
-	// 	const navLinks = document.querySelectorAll('.nav-link a');
-	// 	const metricsPage = document.querySelector('.metrics-page');
-	// 	const studentsPage = document.querySelector('.students-page');
-	// 	const companiesPage = document.querySelector('.companies-page');
-	// 	const teachersPage = document.querySelector('.teachers-page');
-	// 	const coursesPage = document.querySelector('.courses-page');
-
-	// 	const sectionOptions = {
-	// 		rootMargin: '-30px 0px 0px 0px',
-	// 	};
-
-	// 	const sectionObserver = new IntersectionObserver(((entries, sectionObserver) => {
-	// 		entries.forEach((entry) => {
-	// 			if (entry.isIntersecting) {
-	// 				burgerDivs.forEach((divBar) => {
-	// 					divBar.classList.remove('blue-background');
-	// 				});
-
-	// 				navLinks.forEach((link) => {
-	// 					link.classList.remove('blue-text');
-	// 				});
-	// 			} else {
-	// 				burgerDivs.forEach((divBar) => {
-	// 					divBar.classList.add('blue-background');
-	// 				});
-
-	// 				navLinks.forEach((link) => {
-	// 					link.classList.add('blue-text');
-	// 				});
-	// 			}
-	// 		});
-	// 	}), sectionOptions);
-	// }, []);
-
 	function toggleMenu() {
 		const burger = document.querySelector('.burger');
 		const navLinks = document.querySelectorAll('.nav-link');
@@ -64,6 +28,7 @@ export default function Navbar() {
 			</div>
 
 			<ul>
+				<li className="nav-link"><a href="/static/terminal" onClick={() => toggleMenu()}>&gt;_</a></li>
 				<li className="nav-link"><a href="#landing-page" onClick={() => toggleMenu()}>Home</a></li>
 				<li className="nav-link"><a href="#metrics-page" onClick={() => toggleMenu()}>Métricas</a></li>
 				<li className="nav-link"><a href="#students-page" onClick={() => toggleMenu()}>Alunos</a></li>
